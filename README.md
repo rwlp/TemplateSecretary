@@ -1,6 +1,8 @@
-# Project Title
+# Template Secretary App Android for Church
 
-Brief description or tagline about your project.
+O objetivo deste aplicativo android é proporcinar para Igrejas Evangelicas uma ferramenta com dois objetivos principais:
+O primeiro é a administração da Igreja resolver o problema de acesso a dados de seus membros e visitantes.
+O segundo é transmitir informações da propria Igreja para seu membros e publico em geral através de dispositivos moveis.
 
 ## Table of Contents
 
