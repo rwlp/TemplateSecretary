@@ -3,12 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonateFragment">
+    tools:context="rwlp.templatescretary.MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Nada"
+            android:scaleType="fitXY"
+            android:id="@+id/ivDonateQrCode"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/img_donateqrcode"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="145dp" />
+    </RelativeLayout>
 </FrameLayout>

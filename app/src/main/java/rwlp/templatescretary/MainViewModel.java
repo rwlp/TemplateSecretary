@@ -13,23 +13,23 @@ public class MainViewModel extends ViewModel {
     }
 
     public void navigateToHome() {
-         selectedFragment.setValue(R.id.homeFragment);
+        selectedFragment.setValue(R.id.homeFragment);
     }
 
     public void navigateToContent() {
-         selectedFragment.setValue(R.id.otherFragment);
+         selectedFragment.setValue(R.id.contentFragment);
     }
 
     public void navigateToRegister() {
-        // selectedFragment.setValue(R.id.) TODO: Make the fragment Register
+        selectedFragment.setValue(R.id.sendDataFragment);
     }
 
     public void navigateToDonate() {
-        // TODO: Make the fragment Donate
+        selectedFragment.setValue(R.id.donateFragment);
     }
 
     public void navigateToMoreMenu() {
-        // TODO: Make the fragment More Menu
+        selectedFragment.setValue(R.id.moreMenuFragment);
     }
 
 }

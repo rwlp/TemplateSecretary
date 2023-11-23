@@ -15,7 +15,7 @@
         android:title="Card"
         android:icon="@drawable/baseline_perm_contact_calendar_24"/>
 
-    <item android:id="@+id/bottomButtonHomeDonate"
+    <item android:id="@+id/bottomButtonDonate"
         android:title="Donate"
         android:icon="@drawable/baseline_handshake_24"/>
 

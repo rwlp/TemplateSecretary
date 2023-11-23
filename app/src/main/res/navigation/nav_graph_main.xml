@@ -10,11 +10,25 @@
         android:name="rwlp.templatescretary.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/otherFragment"
-        android:name="rwlp.templatescretary.OtherFragment"
-        android:label="fragment_other"
-        tools:layout="@layout/fragment_other" />
+        android:id="@+id/contentFragment"
+        android:name="rwlp.templatescretary.ContentFragment"
+        android:label="fragment_content"
+        tools:layout="@layout/fragment_content" />
+    <fragment
+        android:id="@+id/sendDataFragment"
+        android:name="rwlp.templatescretary.SendDataFragment"
+        android:label="fragment_send_data"
+        tools:layout="@layout/fragment_send_data" />
+    <fragment
+        android:id="@+id/donateFragment"
+        android:name="rwlp.templatescretary.DonateFragment"
+        android:label="fragment_donate"
+        tools:layout="@layout/fragment_donate" />
+    <fragment
+        android:id="@+id/moreMenuFragment"
+        android:name="rwlp.templatescretary.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
 
 </navigation>
