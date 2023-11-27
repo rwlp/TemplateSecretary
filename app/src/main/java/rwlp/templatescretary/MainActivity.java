@@ -6,22 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
-import androidx.activity.OnBackPressedCallback;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.core.view.GravityCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
-import androidx.navigation.NavHostController;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -36,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initi of MainViewModel Instance
+        // Init of MainViewModel Instance
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         // Set the observe to control screens in flNavHostFragment
@@ -53,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById(R.id.tbTopBarMainActivity);
         drawerLayout = findViewById(R.id.dlDrawerMainActivity);
         bottomNavigationView = findViewById(R.id.bnvBottomNavigationViewMainActivity);
-        // Set the action for click in each buttom in bottom bar navigation.
+        // Set the action for click in each button in bottom bar navigation.
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();

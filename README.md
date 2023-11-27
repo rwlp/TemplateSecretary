@@ -21,10 +21,18 @@ Provide an overview of your project. Mention its purpose, key features, and any 
 
 ## Features
 
-- List the main features of your project.
-- Feature 1
-- Feature 2
-- ...
+- Home page
+  - Contem imagems que referenciam as 4 telas de conteudo do app, conferir em "telas de conteudo"
+- Telas de Conteudo
+  - Tela de Aviso: Apenas uma imagem com botões para compartilhar
+  - Tela Video: Abre um video de conteudo( youtube preferencialmente )
+  - Tela Artigos: Tela para ler atigos dentro do aplicativo
+  - Tela Form: Tela que tem um formulario com passos, para que os dados sejam enviados para o servidor
+  - Tela Departamento: Tela que tem foto, descriçao e galeria de fotos
+  - Tela Donate: Uma tela com apenas imagem com qrcode e pix para area de transferencia. 
+- Controle de usuario ... TODO
+- Bbilia ... TODO
+- Grupos ... TODO
 
 ## Architecture
 
