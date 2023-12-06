@@ -5,13 +5,18 @@ import android.widget.ImageView;
 public class HomeDataModel {
 
     private int imageOfItemInRecycleView;
+    private int imageOfPrincipalView;
     private String titleOfItemInRecycleView;
     private String subtitleInItemInRecycleView;
 
-    public HomeDataModel(int imageOfItemInRecycleView, String titleOfItemInRecycleView, String subtitleInItemInRecycleView) {
-        this.imageOfItemInRecycleView = imageOfItemInRecycleView;
-        this.titleOfItemInRecycleView = titleOfItemInRecycleView;
-        this.subtitleInItemInRecycleView = subtitleInItemInRecycleView;
+
+
+    public int getImageOfPrincipalView() {
+        return imageOfPrincipalView;
+    }
+
+    public void setImageOfPrincipalView() {
+        this.imageOfPrincipalView = imageOfPrincipalView;
     }
 
     public int getImageOfItemInRecycleView() {
