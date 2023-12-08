@@ -1,10 +1,13 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.repositories;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import rwlp.templatescretary.R;
+import rwlp.templatescretary.datamodels.HomeDataModel;
 
 public class Repository {
 
@@ -30,7 +33,6 @@ public class Repository {
 
         MutableLiveData<List<HomeDataModel>> homeData = new MutableLiveData<>();
 
-        // Create a list to hold simulated data
         List<HomeDataModel> simulatedData = new ArrayList<>();
 
         for (int i = 0; i < titles.length; i++) {

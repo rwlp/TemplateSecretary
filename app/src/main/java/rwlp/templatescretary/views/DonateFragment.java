@@ -1,4 +1,4 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.views;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import rwlp.templatescretary.R;
 
 public class DonateFragment extends Fragment {
 

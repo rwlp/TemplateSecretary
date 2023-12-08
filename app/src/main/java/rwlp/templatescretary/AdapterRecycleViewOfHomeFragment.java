@@ -8,15 +8,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.LiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import rwlp.templatescretary.datamodels.HomeDataModel;
+
 public class AdapterRecycleViewOfHomeFragment extends RecyclerView.Adapter<AdapterRecycleViewOfHomeFragment.HomeViewHolderForRecyclerView> {
 
     private List<HomeDataModel> homeDataModelList;
-    private Context context;
+    private final Context context;
 
     public AdapterRecycleViewOfHomeFragment (Context context) {
         this.context = context;

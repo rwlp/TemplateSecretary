@@ -1,4 +1,4 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.views;
 
 import android.os.Bundle;
 
@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
+import rwlp.templatescretary.AdapterRecycleViewOfHomeFragment;
+import rwlp.templatescretary.R;
+import rwlp.templatescretary.viewmodels.HomeViewModel;
 
 public class HomeFragment extends Fragment {
 

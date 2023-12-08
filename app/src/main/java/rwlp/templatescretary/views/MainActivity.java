@@ -1,4 +1,4 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,54 +18,54 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import java.util.Objects;
+
+import rwlp.templatescretary.R;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
-    private BottomNavigationView bottomNavigationView;
-    private Toolbar toolbar;
-    private NavigationView navigationView;
-    private MainViewModel mainViewModel;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BottomNavigationView bottomNavigationView;
+        Toolbar toolbar;
+        NavigationView navigationView;
+
         // Init of MainViewModel Instance
-        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         // Set the observe to control screens in flNavHostFragment
-        mainViewModel.getSelectedFragment().observe(this, fragmentId -> {
-            // Use Navigation Component to navigate to the selected fragment
-            NavController navController = Navigation.findNavController(this, R.id.flNavHostFragmentMain);
-            navController.navigate(fragmentId);
-        });
 
         // Init and configuration of Toolbar, Navigation Drawer and Bottom Bar.
         // Observe that the actions in menu in Navigation Drawer have settings
         // in method onNavigationItemSelected of this class.
 
-        toolbar = findViewById(R.id.tbTopBarMainActivity);
         drawerLayout = findViewById(R.id.dlDrawerMainActivity);
+        navController = Navigation.findNavController(this, R.id.flNavHostFragmentMain);
+        toolbar = findViewById(R.id.tbTopBarMainActivity);
         bottomNavigationView = findViewById(R.id.bnvBottomNavigationViewMainActivity);
         // Set the action for click in each button in bottom bar navigation.
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.bottomButtonHome ) {
-                mainViewModel.navigateToHome();
+                navController.navigate(R.id.homeFragment);
                 return true;
             } else if (id == R.id.bottomButtoncContent ) {
-                mainViewModel.navigateToContent();
+                navController.navigate(R.id.contentFragment);
                 return true;
             } else if (id == R.id.bottomButtonSendData) {
-                mainViewModel.navigateToRegister();
+                navController.navigate(R.id.sendDataFragment);
                 return true;
             } else if (id == R.id.bottomButtonDonate) {
-                mainViewModel.navigateToDonate();
+                navController.navigate(R.id.donateFragment);
                 return true;
             } else if (id == R.id.bottomButtonMore) {
-                mainViewModel.navigateToMoreMenu();
+                navController.navigate(R.id.moreMenuFragment);
                 return true;
             }
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Here we set the button menu in Toolbar to open the navigation Drawer
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -86,12 +86,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        // Here are handle the navigation in Menu of Navigations Drawer Menu
+        // Here are handle the navigation in Menu of Navigation Drawer Menu
 
         int id = item.getItemId();
         if (id == R.id.navDrawerButtonProfileSettings) {
             // TODO: function to set the navigation to the profile UI settings
-            mainViewModel.navigateToRegister();
+            navController.navigate(R.id.sendDataFragment);
+            drawerLayout.closeDrawer(GravityCompat.START); // Close the navigation drawer
             return true;
         }
         drawerLayout.closeDrawer(GravityCompat.START); // Close the navigation drawer

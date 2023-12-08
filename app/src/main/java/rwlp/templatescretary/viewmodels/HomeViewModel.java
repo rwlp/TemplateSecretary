@@ -1,8 +1,11 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.viewmodels;
 
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+
+import rwlp.templatescretary.repositories.Repository;
+import rwlp.templatescretary.datamodels.HomeDataModel;
 
 public class HomeViewModel {
 

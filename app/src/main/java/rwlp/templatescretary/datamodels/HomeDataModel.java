@@ -1,4 +1,4 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.datamodels;
 
 import android.widget.ImageView;
 
