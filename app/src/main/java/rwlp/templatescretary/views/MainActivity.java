@@ -98,4 +98,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START); // Close the navigation drawer
         return false;
     }
-}
+}   

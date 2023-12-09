@@ -1,49 +1,51 @@
 # Template Secretary App Android for Church
 
-O objetivo deste aplicativo android é proporcinar para Igrejas Evangelicas uma ferramenta com dois objetivos principais:
-O primeiro é a administração da Igreja resolver o problema de acesso a dados de seus membros e visitantes.
-O segundo é transmitir informações da propria Igreja para seu membros e publico em geral através de dispositivos moveis.
-
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
 - [Architecture](#architecture)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
 
-Provide an overview of your project. Mention its purpose, key features, and any unique aspects. Include badges if applicable (e.g., build status).
+This code is an app with basic structure. The main goal of this code is to show my skills in MVVM architecture. 
+This app don't have practical use, but can be used to start a real application. 
 
 ## Features
 
-- Home page
-  - Contem imagems que referenciam as 4 telas de conteudo do app, conferir em "telas de conteudo"
-- Telas de Conteudo
-  - Tela de Aviso: Apenas uma imagem com botões para compartilhar
-  - Tela Video: Abre um video de conteudo( youtube preferencialmente )
-  - Tela Artigos: Tela para ler atigos dentro do aplicativo
-  - Tela Form: Tela que tem um formulario com passos, para que os dados sejam enviados para o servidor
-  - Tela Departamento: Tela que tem foto, descriçao e galeria de fotos
-  - Tela Donate: Uma tela com apenas imagem com qrcode e pix para area de transferencia. 
-- Controle de usuario ... TODO
-- Bbilia ... TODO
-- Grupos ... TODO
+- Bottom Navigation
+  - A bottom bar that controls the content in center screen
+- TopBar
+  - A top bar with Logo and simple Menu. 
+- Navigation Drawer
+  - A Drawer Navigation with options and actions
 
 ## Architecture
 
-Briefly explain the architecture of your project, especially focusing on the MVVM pattern if relevant.
+The Architecture of this project use MVVM pattern and simple modularization. 
+There are 5 main packages:
+- datamodels: this packages contain classes with data structures used in the views.
+- di: There are the modules and interfaces used by Dragger lib to Dependency Injection on entire project. 
+- repositories: The classes responsible to fetch data from database
+- viewmodels: for each view in project exists a viewmodel class responsible to treat data and show this data to view classes
+- views: Activities and Fragment classes are in this package. Every UI component of framework are on this classes and just in this classes. 
+
+We use LiveData pack to dynamic refresh of the UI based on data change. 
 
 ## Getting Started
 
+To run this project is recomended use Android Studio Hedgehog | 2023.1.1
+See android manifest for more details of device operational system and other technical informations. 
+
 Provide instructions on how to set up the project locally. Include prerequisites, installation steps, and any configuration needed.
 
-```bash
-# Example code snippet
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-./setup.sh
+## Contributing
+
+Feel free to contributions on this project. 
+
+## License 
+
+Feel free to use this, just please give credits. 

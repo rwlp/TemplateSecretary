@@ -12,21 +12,18 @@ import rwlp.templatescretary.datamodels.HomeDataModel;
 public class Repository {
 
 
-    /* // Here we use to connect the external or internal data base
-    // of the application
 
-    private MyDataBase myDataBase;
 
-    public Repository() {
-        yourDatabase = YourDatabase.getInstance();
-    }
-    */
-
-    // This method is used to get all data to home Fragment.
-    // Todo: data for home fragment
-    //  this method need to return a LiveData<List<HomeDataModel>> object
     public LiveData<List<HomeDataModel>>  getHomeData() {
-        // fake data
+        /* Here we use to connect the external or internal data base
+
+         * private MyDataBase myDataBase;
+         * public Repository() {
+         *   yourDatabase = YourDatabase.getInstance();
+         *}
+         */
+
+        // We are using fake data, could use resources, sqlite, etc. in this case are simple arrays with random data
         String[] titles = {"Aviso", "Envento", "Artigo"};
         String[] subtitles = {"Agenda Semanal", "Congresso Juventude", "A arca da Aliança"};
         int[] imageIds = {R.drawable.image_recycle_view, R.drawable.image_recycle_view, R.drawable.image_recycle_view};

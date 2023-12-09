@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import rwlp.templatescretary.AdapterRecycleViewOfHomeFragment;
 import rwlp.templatescretary.R;
 import rwlp.templatescretary.viewmodels.HomeViewModel;
 

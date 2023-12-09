@@ -1,4 +1,4 @@
-package rwlp.templatescretary;
+package rwlp.templatescretary.views;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import rwlp.templatescretary.R;
 import rwlp.templatescretary.datamodels.HomeDataModel;
 
 public class AdapterRecycleViewOfHomeFragment extends RecyclerView.Adapter<AdapterRecycleViewOfHomeFragment.HomeViewHolderForRecyclerView> {
